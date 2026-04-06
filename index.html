@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal Pendaftaran Resmi Universitas Udayana (UNUD) Tahun Akademik 2026/2027. Daftar sekarang melalui jalur SNBP, SBMPTN, dan Mandiri. Informasi lengkap, pengumuman, dan helpdesk resmi.">
+    <title>Portal Pendaftaran | Universitas Udayana</title>
+    <meta name="google-site-verification" content="SrTZawFSaLAONuV52vjH13dAEw3zOeO0J7W9G7wwpi8" />
+    <link href="https://e-registrasi.unud.ac.id/assets/img/UnudLogo.png" type="image/x-icon" rel="icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .header-bg { background: linear-gradient(to right, #003087, #0066cc); }
+        .banner-bg { 
+            background-image: linear-gradient(rgba(0, 48, 135, 0.65), rgba(0, 48, 135, 0.75)), 
+                              url('https://e-registrasi.unud.ac.id/assets/img/background-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .footer-bg { background-color: #003087; }
+        
+        /* Back-to-Top Button */
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #003087;
+            color: white;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 12px rgba(0, 48, 135, 0.3);
+            z-index: 9999;
+            transition: all 0.3s ease;
+            border: 2px solid #ff8c00;
+        }
+        #backToTop:hover {
+            background-color: #0066cc;
+            transform: translateY(-3px);
+        }
+        #backToTop.show { display: flex; }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+
+<!-- HEADER (sama persis) -->
+<header class="header-bg text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <img src="https://e-registrasi.unud.ac.id/assets/img/UnudLogo.png" alt="Logo Universitas Udayana" class="h-12 w-auto">
+            <div>
+                <h1 class="text-xl font-bold tracking-tight">Universitas Udayana</h1>
+                <p class="text-xs -mt-1 opacity-90">E-Registrasi Mahasiswa Baru</p>
+            </div>
+        </div>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+            <a href="#" class="hover:underline">Beranda</a>
+            <a href="#" class="hover:underline">Jalur Pendaftaran</a>
+            <a href="#" class="hover:underline">Pengumuman</a>
+            <a href="#" class="hover:underline">Panduan & Download</a>
+            <a href="#" class="hover:underline">FAQ</a>
+            <a href="#" class="hover:underline">Kontak</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+            <a href="#" class="bg-white text-[#003087] px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-gray-100 transition">Login PMB</a>
+            <a href="#" class="bg-orange-500 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-orange-600 transition">Daftar Sekarang</a>
+            <button class="md:hidden text-3xl"><i class="fas fa-bars"></i></button>
+        </div>
+    </div>
+</header>
+
+<!-- BANNER UTAMA (Hero Banner dengan Gambar) -->
+<section class="banner-bg h-screen flex items-center text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center md:text-left">
+        <div class="max-w-2xl">
+            <h2 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+                Selamat Datang di<br>
+                <span class="text-orange-300">Portal E-Registrasi UNUD</span>
+            </h2>
+            <p class="text-xl md:text-2xl mb-8 opacity-95">
+                Pendaftaran Mahasiswa Baru Tahun Akademik 2026/2027<br>
+                Jalur SNBP • SBMPTN • Mandiri
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <a href="#" class="bg-white text-[#003087] px-10 py-4 rounded-full text-lg font-semibold inline-flex items-center gap-3 hover:shadow-2xl transition-all">
+                    <i class="fas fa-user-plus"></i> 
+                    Daftar Sekarang
+                </a>
+                <a href="#" class="border-2 border-white hover:bg-white/10 px-10 py-4 rounded-full text-lg font-semibold transition-all">
+                    Lihat Pengumuman
+                </a>
+            </div>
+
+            <!-- Info Tambahan di Banner -->
+            <div class="mt-12 flex flex-wrap justify-center md:justify-start gap-8 text-sm">
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-users text-3xl opacity-80"></i>
+                    <div>
+                        <div class="font-semibold">12.845+</div>
+                        <div class="opacity-75">Calon Mahasiswa</div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-calendar-alt text-3xl opacity-80"></i>
+                    <div>
+                        <div class="font-semibold">30 April 2026</div>
+                        <div class="opacity-75">Batas Akhir Pendaftaran</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay gradient tambahan di bawah -->
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#003087] to-transparent"></div>
+</section>
+
+<!-- SECTION LAIN (Jalur Pendaftaran, Pengumuman, dll.) bisa ditambahkan di sini seperti versi sebelumnya -->
+
+<!-- FOOTER LENGKAP + BACK-TO-TOP -->
+<footer class="footer-bg text-white pt-16 pb-8 relative">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <!-- Kolom 1: Logo & Deskripsi -->
+            <div>
+                <div class="flex items-center gap-3 mb-6">
+                    <img src="https://e-registrasi.unud.ac.id/assets/img/UnudLogo.png" alt="Logo Universitas Udayana" class="h-14 w-auto brightness-110">
+                    <div>
+                        <h3 class="text-2xl font-bold">Universitas Udayana</h3>
+                        <p class="text-sm opacity-90">E-Registrasi</p>
+                    </div>
+                </div>
+                <p class="text-sm leading-relaxed opacity-90">
+                    Portal resmi pendaftaran mahasiswa baru Universitas Udayana. 
+                    Layanan transparan, cepat, dan terintegrasi untuk calon mahasiswa baru Tahun 2026.
+                </p>
+                <div class="mt-6 flex gap-5 text-2xl">
+                    <a href="#" class="hover:text-orange-400 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-orange-400 transition"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="hover:text-orange-400 transition"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="hover:text-orange-400 transition"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- Kolom 2: Navigasi -->
+            <div>
+                <h4 class="text-lg font-semibold mb-6 border-b border-white/30 pb-2">Navigasi Cepat</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-orange-300 transition">Beranda</a></li>
+                    <li><a href="#" class="hover:text-orange-300 transition">Jalur SNBP</a></li>
+                    <li><a href="#" class="hover:text-orange-300 transition">Jalur SBMPTN</a></li>
+                    <li><a href="#" class="hover:text-orange-300 transition">Jalur Mandiri</a></li>
+                    <li><a href="#" class="hover:text-orange-300 transition">Pengumuman Hasil</a></li>
+                    <li><a href="#" class="hover:text-orange-300 transition">Panduan & Formulir</a></li>
+                    <li><a href="#" class="hover:text-orange-300 transition">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3: Kontak -->
+            <div>
+                <h4 class="text-lg font-semibold mb-6 border-b border-white/30 pb-2">Kontak & Helpdesk</h4>
+                <div class="space-y-4 text-sm">
+                    <div class="flex gap-3">
+                        <i class="fas fa-map-marker-alt mt-1 text-orange-400"></i>
+                        <div>Jl. Raya Kampus Bukit Jimbaran, Kuta Selatan, Badung, Bali 80361</div>
+                    </div>
+                    <div class="flex gap-3">
+                        <i class="fas fa-phone mt-1 text-orange-400"></i>
+                        <div>(0361) 223 344 / 701 954<br>Helpdesk: 0812 1234 5678</div>
+                    </div>
+                    <div class="flex gap-3">
+                        <i class="fas fa-envelope mt-1 text-orange-400"></i>
+                        <div>pmb@unud.ac.id<br>registrasi@unud.ac.id</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kolom 4: Link Penting -->
+            <div>
+                <h4 class="text-lg font-semibold mb-6 border-b border-white/30 pb-2">Link Penting</h4>
+                <ul class="space-y-3 text-sm mb-8">
+                    <li><a href="#" class="hover:text-orange-300 transition">Website Resmi UNUD</a></li>
+                    <li><a href="#" class="hover:text-orange-300 transition">Sistem Informasi Akademik</a></li>
+                    <li><a href="#" class="hover:text-orange-300 transition">Download Formulir</a></li>
+                    <li><a href="#" class="hover:text-orange-300 transition">Kalender Akademik 2026</a></li>
+                </ul>
+                <div class="bg-white/10 p-5 rounded-2xl text-sm">
+                    <p class="font-medium mb-2">Jam Layanan Helpdesk</p>
+                    <p class="opacity-90">Senin – Jumat: 08.00 – 16.00 WITA<br>Sabtu: 08.00 – 13.00 WITA</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-white/30 mt-16 pt-8 text-center text-xs opacity-75">
+            <p>&copy; 2026 Universitas Udayana. All Rights Reserved.</p>
+            <p class="mt-1">Portal E-Registrasi • Kebijakan Privasi • Syarat dan Ketentuan</p>
+        </div>
+    </div>
+
+    <!-- Back-to-Top Button -->
+    <button id="backToTop" aria-label="Kembali ke atas">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</footer>
+
+<script>
+    // Back-to-Top functionality
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTop.classList.add('show');
+        } else {
+            backToTop.classList.remove('show');
+        }
+    });
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+
+</body>
+</html>
